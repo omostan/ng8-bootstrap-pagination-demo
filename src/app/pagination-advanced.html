@@ -1,0 +1,19 @@
+<p>Restricted size, no rotation:</p>
+<ngb-pagination [collectionSize]=data.length #numPagesExp1 [(page)]="currentPage" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+
+<pre><span class="float-md-left">Page: {{ currentPage }} / {{ numPagesExp1.pageCount }}</span></pre>
+
+<p>Restricted size with rotation:</p>
+<ngb-pagination [collectionSize]=data.length #numPagesExp2 [(page)]="currentPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+
+<pre><span class="float-md-left">Page: {{ currentPage }} / {{ numPagesExp2.pageCount }}</span></pre>
+
+<p>Restricted size with rotation and no ellipses:</p>
+<ngb-pagination [collectionSize]=data.length #numPagesExp3 [(page)]="currentPage" [maxSize]="5" [rotate]="true" [ellipses]="false"
+ [boundaryLinks]="true"></ngb-pagination>
+
+<pre><span class="float-md-left">Page: {{ currentPage }} / {{ numPagesExp3.pageCount }}</span></pre>
+
+<hr>
+
+<pre>Current page: {{ currentPage }}</pre>
